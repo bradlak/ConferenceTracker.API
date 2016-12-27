@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C3F79D99-E140-42E0-8124-13804A862F09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CE4BCF79-4789-4BB4-927C-87D6C8376092}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ConferenceTracker.API", "src\ConferenceTracker.API\ConferenceTracker.API.xproj", "{A3F0ED8D-0FE1-486B-B927-D5816E8EB5FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3F0ED8D-0FE1-486B-B927-D5816E8EB5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F0ED8D-0FE1-486B-B927-D5816E8EB5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F0ED8D-0FE1-486B-B927-D5816E8EB5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F0ED8D-0FE1-486B-B927-D5816E8EB5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3F0ED8D-0FE1-486B-B927-D5816E8EB5FE} = {C3F79D99-E140-42E0-8124-13804A862F09}
+	EndGlobalSection
+EndGlobal
