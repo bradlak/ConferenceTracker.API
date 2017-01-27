@@ -1,6 +1,6 @@
 ﻿namespace ConferenceTracker.API.Entities
 {
-    public class Sponsor : BaseObject
+    public class Sponsor : BaseEntity
     {
         public string Name { get; set; }
 

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ConferenceTracker.API.Entities
 {
-    public class Event : BaseObject
+    public class Event : BaseEntity
     {
         public string Title { get; set; }
 

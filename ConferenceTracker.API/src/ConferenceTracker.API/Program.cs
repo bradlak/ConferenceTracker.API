@@ -13,13 +13,14 @@ namespace ConferenceTracker.API
                 .AddJsonFile("hosting.json", optional: true)
                 .Build();
 
-
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseConfiguration(config)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
+                .UseSetting("detailedErrors","true")
                 .UseStartup<Startup>()
+                .CaptureStartupErrors(true)
                 .Build();
 
             host.Run();

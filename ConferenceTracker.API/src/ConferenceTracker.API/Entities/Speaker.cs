@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ConferenceTracker.API.Entities
 {
-    public class Speaker : BaseObject
+    public class Speaker : BaseEntity
     {
+        public Speaker()
+        {
+            SpeakerSessions = new List<SpeakerSession>();
+        }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -22,5 +24,7 @@ namespace ConferenceTracker.API.Entities
         public string TwitterUrl { get; set; }
 
         public string GithubUrl { get; set; }
+
+        public virtual ICollection<SpeakerSession> SpeakerSessions { get; set; }
     }
 }

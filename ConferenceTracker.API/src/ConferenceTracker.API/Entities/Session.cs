@@ -1,13 +1,15 @@
-﻿using ConferenceTracker.API.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ConferenceTracker.API.Entities
 {
-    public class Session : BaseObject
+    public class Session : BaseEntity
     {
+        public Session()
+        {
+            SpeakerSessions = new List<SpeakerSession>();
+        }
+
         public string Title { get; set; }
 
         public string Description { get; set; }
@@ -16,6 +18,6 @@ namespace ConferenceTracker.API.Entities
 
         public DateTime End { get; set; }
 
-        public ICollection<Speaker> Speakers { get; set; } = new List<Speaker>();
+        public virtual ICollection<SpeakerSession> SpeakerSessions { get; set; }
     }
 }

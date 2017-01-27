@@ -1,6 +1,6 @@
 ﻿using ConferenceTracker.API.Entities;
 
-namespace ConferenceTracker.API.FakeDatabase
+namespace ConferenceTracker.API.FakeDataProviders
 {
     public class InfoDataStore
     {
@@ -12,8 +12,7 @@ namespace ConferenceTracker.API.FakeDatabase
         {
             Info = new ConferenceInfo()
             {
-                Id = 1,
-                Info = "Super konferencja a ten opis to z InfoDataStore'a"
+                Info = "Konferencja taka super. Wow!"
             };
         }
     }

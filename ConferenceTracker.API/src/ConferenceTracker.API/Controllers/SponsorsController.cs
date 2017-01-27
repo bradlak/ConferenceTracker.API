@@ -1,5 +1,5 @@
 ﻿using ConferenceTracker.API.Entities;
-using ConferenceTracker.API.FakeDatabase;
+using ConferenceTracker.API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -9,20 +9,18 @@ namespace ConferenceTracker.API.Controllers
     public class SponsorsController : Controller
     {
         private ILogger<SponsorsController> logger;
-        ConferenceTrackerContext db;
+        private GenericRepository<ConferenceTrackerContext, Sponsor> repository;
 
         public SponsorsController(ILogger<SponsorsController> logger, ConferenceTrackerContext context)
         {
             this.logger = logger;
-            db = context;
+            repository = new GenericRepository<ConferenceTrackerContext, Sponsor>(context);
         }
 
         [HttpGet]
         public IActionResult GetSponsors()
         {
-            logger.LogInformation("GetSponsors executed");
-
-            return Ok(SponsorsDataStore.Current.Sponsors);
+            return Ok(repository.Get());
         }
     }
 }
